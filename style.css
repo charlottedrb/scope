@@ -8,7 +8,7 @@ body{
     color: white;
 }
 
-/*menuIGATION*/
+/*NAVIGATION*/
 
 .menu ul {
     height: 100%;
@@ -18,16 +18,10 @@ body{
 .menu a {
     display: block;
     position: relative;
-    padding: 0.5rem;
+    margin: 0.5rem;
     color: white;
     font-family: 'Nunito Sans';
     text-decoration: none;
-}
-
-.menu a::after{
-    content: '';
-    position: absolute;
-    background-color: white; 
 }
 
 .menu li {
@@ -45,7 +39,6 @@ body{
         flex-flow: column wrap;
     }
 }
-  
 
 h1{
     margin-right: 5rem;
@@ -57,4 +50,39 @@ h1{
     font-style: italic;
     height: 100%;
     margin-left: 2rem;
+}
+
+/*ANIMATIONS*/
+.menu a::before, .menu a::after {
+    content:attr(data-content); 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+    
+.menu a::before {
+    color: #00ffff;
+    z-index: -1;
+}
+
+.menu a::after {
+    color: tomato;
+    z-index: -2;
+}
+    
+.menu a:hover::before {
+    animation: glitch 0.3s ease-in infinite;
+
+}
+
+.menu a:hover::after {
+    animation: glitch 0.3s ease-in infinite reverse;
+}
+
+@keyframes glitch {
+    0%   {transform: translate(-2px, 2px);}
+    25%  {transform: translate(-2px, -2px);}
+    50%  {transform: translate(2px, 2px);}
+    75%  {transform: translate(2px, -2px);}
+    100%  {transform: translate(-2px, 2px);}
 }
