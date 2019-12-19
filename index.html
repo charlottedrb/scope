@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <title>What about that movie ?</title>
 </head>
+
 <body>
-    <div class="title">
-        <h1>Latest Weather at Elysium Planitia</h1>
+    <h1 class="title">Latest Weather at Elysium Planitia</h1>
+    <div class="movie">
+        <p id="description"></p>
     </div>
-    <div class="description">
-        <p>
-            InSight is taking daily weather measurements (temperature, wind, pressure) on the surface of Mars at Elysium Planitia, a
-            flat, smooth plain near Mars’ equator.
-        </p>
-    </div>
+    <input type="text" name="search" id="search">
+    <button id="letsgo" onclick="search()">Search</button>
+    <img src="" alt="poster" id="poster">
     <script src="script.js"></script>
 </body>
+
 </html>
