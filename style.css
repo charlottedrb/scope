@@ -1,18 +1,60 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,900,900i&display=swap');
 
 body{
-    background-image: url('img/mars.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Archivo Black';
+    width: 1000px;
+    margin: auto;
+    background-color: black;
+    font-family: 'Nunito Sans';
     color: white;
 }
 
+/*menuIGATION*/
+
+.menu ul {
+    height: 100%;
+    list-style: none; /*enlève les puces présentes sur les listes de base*/
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    padding: 0.5rem;
+    color: white;
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+}
+
+.menu a::after{
+    content: '';
+    position: absolute;
+    background-color: white; 
+}
+
+.menu li {
+    flex-basis: 8%;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media (max-width: 450px) {
+    .menu ul {
+        flex-flow: column wrap;
+    }
+}
+  
+
 h1{
-    font-size: 3rem;
+    margin-right: 5rem;
+    font-size: 2rem;
 }
 
 .title{ 
+    font-weight: 900;
+    font-style: italic;
     height: 100%;
     margin-left: 2rem;
 }
