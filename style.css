@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 
 body{
-    display: flex;
     background-image: url('img/mars.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,7 +13,6 @@ h1{
 }
 
 .title{
-    flex: 100% 0 0;
     height: 100%;
     margin-left: 2rem;
 }
