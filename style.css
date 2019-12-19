@@ -14,8 +14,7 @@ h1{
 }
 
 .title{
-    flex: 100% 0 0; 
+    flex: 100% 0 0;
     height: 100%;
     margin-left: 2rem;
 }
-
