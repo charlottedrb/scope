@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,9 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/index.css">
-    <title>HOME</title>
+    <link rel="stylesheet" href="css/movie.css">
+    <title>Scope</title>
 </head>
+
 <body>
     <nav class="menu" role="navigation">
         <ul>
@@ -21,11 +24,26 @@
             <li><a href="#" data-content="Test">Test</a></li>
         </ul>
     </nav>
-    <div class="search">
-        <h1>I want information about ...</h1>
+    <!-- <div class="search">
         <input type="text" name="search" id="search">
-        <button id="letsgo" onclick="search()" href="movie.html">Search</button>
+        <button id="letsgo" onclick="search()">Search</button>
+    </div> -->
+    <div class="movie">
+        <img src="" id="poster">
+        <div class="infos">
+            <h2 id="movieTitle"></h2>
+            <p id="ecriture"></p>
+            <p id="description"></p>
+            <p id="date"></p>
+            <p id="duree"></p>
+            <p id="acteurs"></p>
+            <p id="recompenses"></p>
+            <p id="boxoffice"></p>
+            <p id="real"></p>
+            <p id="genre"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

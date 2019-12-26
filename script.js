@@ -8,9 +8,10 @@ const box = document.getElementById('boxoffice');
 const real = document.getElementById('real');
 const genre = document.getElementById('genre');
 const ecrit = document.getElementById('ecriture');
+const title = document.getElementById('movieTitle');
 
 
-function search() {
+function search(){ 
     var search = document.getElementById('search').value;
     var text = 'http://www.omdbapi.com/?t=' + search + '&apikey=4a591bbb';
     const request = fetch(text)
@@ -18,7 +19,8 @@ function search() {
             response.json() //analyse la réponse en JSON
                 .then(function (value) {
                     console.log(value);
-                    desc.innerHTML = 'Story : ' + value.Plot;
+                    // document.location.href="movie.html";
+                    desc.innerHTML = 'Story : ' + value.Plot;   
                     post.src = value.Poster;
                     date.innerHTML = 'Date : ' + value.Released;
                     duree.innerHTML = 'Runtime : ' + value.Runtime;
@@ -28,6 +30,7 @@ function search() {
                     real.innerHTML = 'Director : ' + value.Director;
                     genre.innerHTML = 'Genre : ' + value.Genre;
                     ecrit.innerHTML = 'Writer : ' + value.Writer;
+                    title.innerHTML = value.Title.toUpperCase();
                 });
         });
 }

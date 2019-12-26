@@ -1,0 +1,35 @@
+/*ANIMATIONS*/
+
+.menu a::before, .menu a::after {
+    content:attr(data-content); 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+    
+.menu a::before {
+    color: #00ffff;
+    z-index: -1;
+}
+
+.menu a::after {
+    color: tomato;
+    z-index: -2;
+}
+    
+.menu a:hover::before {
+    animation: glitch 0.3s ease-in infinite;
+
+}
+
+.menu a:hover::after {
+    animation: glitch 0.3s ease-in infinite reverse;
+}
+
+@keyframes glitch {
+    0%   {transform: translate(-2px, 2px);}
+    25%  {transform: translate(-2px, -2px);}
+    50%  {transform: translate(2px, 2px);}
+    75%  {transform: translate(2px, -2px);}
+    100%  {transform: translate(-2px, 2px);}
+}

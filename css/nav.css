@@ -1,0 +1,42 @@
+/*NAVIGATION*/
+
+.menu ul {
+    list-style: none; /*enlève les puces présentes sur les listes de base*/
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    margin: 0.5rem;
+    color: white;
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+}
+
+.menu li {
+    flex-basis: 8%;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media (max-width: 450px) {
+    .menu ul {
+        flex-flow: column wrap;
+    }
+}
+
+h1{
+    margin-right: 5rem;
+    font-size: 2rem;
+}
+
+.title{ 
+    font-weight: 900;
+    font-style: italic;
+    height: 100%;
+    margin-left: 2rem;
+}

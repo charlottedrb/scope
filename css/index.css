@@ -1,0 +1,34 @@
+/* CSS DE LA PAGE INDEX.HTML */
+
+.search{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 1000px;
+    text-align: center;
+}
+
+.search h1{
+    margin-right: 0;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.search input[type='text']{
+    width: 50%;
+    height: 2rem;
+}
+
+.search button{
+    height: 2rem; 
+    padding: 0 1rem;   
+    background-color: tomato;
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: 'Nunito Sans';
+}

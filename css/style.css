@@ -7,52 +7,34 @@ body{
     font-family: 'Nunito Sans';
     color: white;
 }
+/* SEARCH */
 
-/*NAVIGATION*/
-
-.menu ul {
-    height: 100%;
-    list-style: none; /*enlève les puces présentes sur les listes de base*/
+.search{
+    padding-bottom: 1rem
 }
 
-.menu a {
-    display: block;
-    position: relative;
-    margin: 0.5rem;
-    color: white;
-    font-family: 'Nunito Sans';
-    text-decoration: none;
+/* MOVIE */
+
+.movie{
+    display: flex; 
+    padding: 1rem;
+    background-color: white;
+    color: black;
 }
 
-.menu li {
-    flex-basis: 8%;
+.movie img{
+    flex: 0 0 50%;
+    padding: 1rem;
 }
 
-.menu ul {
-    display: flex;
-    align-items: center;
+.movie .infos{
     flex-direction: row;
-}
-
-@media (max-width: 450px) {
-    .menu ul {
-        flex-flow: column wrap;
-    }
-}
-
-h1{
-    margin-right: 5rem;
-    font-size: 2rem;
-}
-
-.title{ 
-    font-weight: 900;
-    font-style: italic;
-    height: 100%;
-    margin-left: 2rem;
+    padding: 1rem;
+    padding-top: 0;
 }
 
 /*ANIMATIONS*/
+
 .menu a::before, .menu a::after {
     content:attr(data-content); 
     position: absolute;
