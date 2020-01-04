@@ -1,3 +1,4 @@
+const movie = document.getElementById('movie');
 const desc = document.getElementById('description');
 const post = document.getElementById('poster');
 const date = document.getElementById('date');
@@ -10,8 +11,10 @@ const genre = document.getElementById('genre');
 const ecrit = document.getElementById('ecriture');
 const title = document.getElementById('movieTitle');
 
+movie.style.opacity = "0"; 
 
 function search(){ 
+    movie.style.opacity = "1";
     var search = document.getElementById('search').value;
     var text = 'http://www.omdbapi.com/?t=' + search + '&apikey=4a591bbb';
     const request = fetch(text)

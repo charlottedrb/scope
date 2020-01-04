@@ -16,7 +16,14 @@
                 <h1 class="title">SCOPE</h1>
             </li>
             <li><a href="#" data-content="Home">Home</a></li>
-            <li><a href="#" data-content="Genre">Genre</a></li>
+            <li><a href="#" data-content="Genre">Genre</a>
+                <ul>
+                    <li>Comedy</li>
+                    <li>Action</li>
+                    <li>Romance</li>
+                    <li>Drama</li>
+                </ul   >
+            </li>
             <li><a href="#" data-content="Blabla">Blabla</a></li>
             <li><a href="#" data-content="Test">Test</a></li>
         </ul>
@@ -24,7 +31,22 @@
     <div class="search">
         <h1>I want information about ...</h1>
         <input type="text" name="search" id="search">
-        <button id="letsgo" onclick="search()" href="movie.html">Search</button>
+        <button id="letsgo" onclick="search()">Search</button>
+    </div>
+    <div class="movie" id="movie">
+        <img src="" id="poster">
+        <div class="infos">
+            <h2 id="movieTitle"></h2>
+            <p id="ecriture"></p>
+            <p id="description"></p>
+            <p id="date"></p>
+            <p id="duree"></p>
+            <p id="acteurs"></p>
+            <p id="recompenses"></p>
+            <p id="boxoffice"></p>
+            <p id="real"></p>
+            <p id="genre"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
