@@ -7,6 +7,7 @@ function search(){
             .then(function (value) {
                 console.log(value);
                 document.getElementById('description').innerHTML = value.Plot;
+                document.getElementById('poster').src = value.Poster;
             });
     });
 }
