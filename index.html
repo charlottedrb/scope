@@ -1,39 +1,62 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Scope</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>HOME</title>
 </head>
-
 <body>
     <nav class="menu" role="navigation">
         <ul>
-            <li><h1 class="title">SCOPE</h1></li>
-            <li><a href="#" data-content="Home">Home</a></li>
-            <li><a href="#" data-content="Genre">Genre</a></li>
-            <li><a href="#" data-content="Blabla">Blabla</a></li>
+            <li>
+                <h1 class="title">SCOPE</h1>
+            </li>
+            <li><a href="#" data-content="Home">Home</a></li> <!-- le data-content permet de gérer l'animation glitch -->
+            <li><a href="#" data-content="Genre">Genre</a>
+                <ul class="down">
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">Drama</a></li>
+                </ul>
+            </li>
+            <li><a href="#" data-content="Year">Year</a>
+                <ul class="down">
+                    <li id="catYear"><input type="text" name="yearSearch" id="yearSearch" placeholder="2008" onkeypress="if(event.keyCode == 13) searchYear();"></li>
+                </ul>
+            </li>
             <li><a href="#" data-content="Test">Test</a></li>
         </ul>
     </nav>
-    <div class="movie">
-        <p id="description"></p>
-        <p id="date"></p>
-        <p id="duree"></p>
-        <p id="acteurs"></p>
-        <p id="recompenses"></p>
-        <p id="boxoffice"></p>
-        <p id="real"></p>
-        <p id="genre"></p>
-        <p id="ecriture"></p>
+    <div class="search">
+        <h1>I want information about ...</h1>
+        <input type="text" name="search" id="search" onkeypress="if(event.keyCode == 13) search();"> <!--  la condition vérifier qu'on presse la touche Entrée -->
+        <button id="letsgo" onclick="search()">Search</button>
     </div>
-    <input type="text" name="search" id="search">
-    <button id="letsgo" onclick="search()">Search</button>
-    <img src="" id="poster">
+    <div class="movie" id="movie">
+        <div class="img">
+            <img src="" id="poster">
+        </div>
+        <div class="infos">
+            <h2 id="movieTitle"></h2>
+            <p id="ecriture"></p>
+            <p id="description"></p>
+            <p id="date"></p>
+            <p id="duree"></p>
+            <p id="acteurs"></p>
+            <p id="recompenses"></p>
+            <p id="boxoffice"></p>
+            <p id="real"></p>
+            <p id="genre"></p>
+        </div>
+        <iframe id="ytplayer" type="text/html" width="720" height="405" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    
     <script src="script.js"></script>
 </body>
-
 </html>

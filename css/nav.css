@@ -1,0 +1,110 @@
+/*NAVIGATION*/
+
+.menu ul {
+    list-style: none; /*enlève les puces présentes sur les listes de base*/
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    margin: 0.5rem;
+    color: white;
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+}
+
+.menu li {
+    flex-basis: 8%;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* MENU DEROULANT */ 
+.menu ul > li {
+    position: relative;
+}
+
+.menu ul > li > .down{
+    display: block; /*très important pour la transition*/
+    position: absolute;
+    width: 100%; 
+    padding: 0;
+    z-index: 9999;
+    opacity: 0; /* permet de faire une transition en fondu*/
+    transition: opacity 0.2s ease-in-out;
+}
+
+.menu ul > li:hover > .down{
+    display: flex; 
+    flex-flow: column wrap;
+    opacity: 1;
+    
+}
+
+.menu ul > li:hover > ul.down{
+    align-items: flex-start;
+}
+
+.menu ul > li > .down li{
+    flex: 1 1 auto; /*flex-grow, flex-shrink, flex-basis*/
+    align-items: flex-start;
+    padding: 0 0.5rem;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.menu ul > li > .down li a{
+    margin: 0; 
+}
+
+.menu ul > li > .down li:hover:nth-child(2n){
+    background-color: tomato;
+}
+
+.menu ul > li > .down li:hover:nth-child(2n+1){
+    background-color: #00ffff;
+}
+
+/* YEAR SEARCH BAR*/ 
+
+#yearSearch{
+    width: 60%;
+}
+
+.menu ul > li > .down #catYear:hover{
+    background: none;
+}
+
+.menu ul > li > .down li > input[type="text"]#yearSearch{
+    padding: 0.2rem;
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease-out;
+}
+
+.menu ul > li > .down li > input[type="text"]#yearSearch:hover{
+    box-shadow: 0px 0px 15px tomato;
+}
+
+
+@media (max-width: 450px) {
+    .menu ul {
+        flex-flow: column wrap;
+    }
+}
+
+h1{
+    margin-right: 5rem;
+    font-size: 2rem;
+}
+
+.title{ 
+    font-weight: 900;
+    font-style: italic;
+    height: 100%;
+    margin-left: 2rem;
+}

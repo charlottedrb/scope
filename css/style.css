@@ -1,58 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,900,900i&display=swap');
 
 body{
+    position: relative;
     width: 1000px;
     margin: auto;
     background-color: black;
     font-family: 'Nunito Sans';
     color: white;
+    padding-bottom: 4rem;
 }
 
-/*NAVIGATION*/
+/* SEARCH */
 
-.menu ul {
-    height: 100%;
-    list-style: none; /*enlève les puces présentes sur les listes de base*/
-}
-
-.menu a {
-    display: block;
-    position: relative;
-    margin: 0.5rem;
-    color: white;
-    font-family: 'Nunito Sans';
-    text-decoration: none;
-}
-
-.menu li {
-    flex-basis: 8%;
-}
-
-.menu ul {
+.search{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 1000px;
+    text-align: center;
 }
 
-@media (max-width: 450px) {
-    .menu ul {
-        flex-flow: column wrap;
-    }
+.search h1{
+    margin-right: 0;
+    text-align: center;
+    font-size: 4rem;
 }
 
-h1{
-    margin-right: 5rem;
-    font-size: 2rem;
+.search input[type='text']{
+    width: 50%;
+    height: 2rem;
 }
 
-.title{
+.search button{
+    height: 2rem;
+    padding: 0 1rem;
+    background-color: tomato;
+    border: 0;
+    color: white;
+    font-size: 1rem;
     font-weight: 900;
-    font-style: italic;
+    font-family: 'Nunito Sans';
+}
+
+/* MOVIE */
+
+.movie{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2rem;
+    background-color: white;
+    color: black;
+}
+
+.movie > *{
+    flex: 1 1 450px;
+}
+
+.movie .img{
+    height: 550px;
+}
+
+
+.movie .img img{
+    width: 100%;
     height: 100%;
-    margin-left: 2rem;
+    overflow: hidden;
+}
+
+.movie .infos{
+    padding: 1rem;
+    padding-top: 0;
 }
 
 /*ANIMATIONS*/
+
 .menu a::before, .menu a::after {
     content:attr(data-content);
     position: absolute;
@@ -78,6 +102,8 @@ h1{
 .menu a:hover::after {
     animation: glitch 0.3s ease-in infinite reverse;
 }
+
+
 
 @keyframes glitch {
     0%   {transform: translate(-2px, 2px);}
