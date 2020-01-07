@@ -25,16 +25,16 @@ function search(){
                 .then(function (value) {
                     console.log(value);
                     // document.location.href="movie.html";
-                    desc.innerHTML = 'Story : ' + value.Plot;
+                    desc.innerHTML = "<b>Story </b>" + ": " + value.Plot;
                     post.src = value.Poster;
-                    date.innerHTML = 'Date : ' + value.Released;
-                    duree.innerHTML = 'Runtime : ' + value.Runtime;
-                    act.innerHTML = 'Actors : ' + value.Actors;
-                    recomp.innerHTML = 'Awards : ' + value.Awards;
-                    box.innerHTML = 'BoxOffice : ' + value.BoxOffice;
-                    real.innerHTML = 'Director : ' + value.Director;
-                    genre.innerHTML = 'Genre : ' + value.Genre;
-                    ecrit.innerHTML = 'Writer : ' + value.Writer;
+                    date.innerHTML = "<b>Date </b>" + ": " + value.Released;
+                    duree.innerHTML = "<b>Runtime </b>" + ": " + value.Runtime;
+                    act.innerHTML = "<b>Actors </b>" + ": " + value.Actors;
+                    recomp.innerHTML = "<b>Awards </b>" + ": " + value.Awards;
+                    box.innerHTML = "<b>BoxOffice </b>" + ": " + value.BoxOffice;
+                    real.innerHTML = "<b>Director </b>" + ": " + value.Director;
+                    genre.innerHTML = "<b>Genre </b>" + ": " + value.Genre;
+                    ecrit.innerHTML = "<b>Writer </b>" + ": " + value.Writer;
                     title.innerHTML = value.Title.toUpperCase();
                 });
         });

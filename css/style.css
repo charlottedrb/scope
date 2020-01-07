@@ -61,16 +61,20 @@ body{
     flex: 1 1 450px;
 }
 
+#poster{
+  width: 250px;
+}
+
 .movie .img{
     height: 500px;
-   
     text-align: center;
 
 }
 
 .movie .infos{
-    padding: 0 4rem 0 0;
+    padding: 0 4rem 0 1rem;
     padding-top: 0;
+    margin-bottom: 2rem;
 }
 
 #movieTitle{
@@ -119,8 +123,6 @@ body{
 
 @media screen and (max-width: 768px){
   .search h1{
-    display:block;
-    clear:both;
     font-size: 2rem;
     color: green;
   }
@@ -142,6 +144,12 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
     .search h1{
         color: green;
+    }
+    ul{
+      padding: 0;
+    }
+    .title{
+      margin: 2rem 0;
     }
 }
 
