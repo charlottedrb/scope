@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,900,900i&display=swap');
 
+
 body{
     position: relative;
-    width: 1000px;
+    width: 80vw; 
     margin: auto;
     background-color: black;
     font-family: 'Nunito Sans';
@@ -18,8 +19,8 @@ body{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 80vw;
     height: 50%;
-    width: 1000px;
     text-align: center;
 }
 
@@ -44,21 +45,7 @@ body{
     font-weight: 900;
     font-family: 'Nunito Sans';
 }
-
-@media screen and (min-width: 768px) and (max-width: 1388px){
-  .search h1{
-    display:block;
-    clear:both;
-    font-size: 2rem;
-  }
-  .search{
-      height: 30%;
-      width: 800px;
-  }
-  .movie{
-    margin: 1rem;
-  }
-}
+x
 
 /* MOVIE */
 
@@ -124,4 +111,72 @@ body{
     50%  {transform: translate(2px, 2px);}
     75%  {transform: translate(2px, -2px);}
     100%  {transform: translate(-2px, 2px);}
+}
+
+/*MEDIA QUERIES*/
+
+
+@media screen and (max-width: 768px){
+  .search h1{
+    display:block;
+    clear:both;
+    font-size: 2rem;
+    color: green;
+  }
+  .search{
+      height: 30%;
+  }
+  .movie{
+    margin: 1rem;
+  }
+}
+
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .search h1{
+        color: green;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    .search h1{
+        color: pink;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
 }
