@@ -13,10 +13,10 @@ const genre = document.getElementById('genre');
 const ecrit = document.getElementById('ecriture');
 const title = document.getElementById('movieTitle');
 
-movie.style.opacity = "0"; 
+movie.style.display = "none"; 
 
 function search(){ 
-    movie.style.opacity = "1";
+    movie.style.display = "flex";
     var search = document.getElementById('search').value;
     var text = 'http://www.omdbapi.com/?t=' + search + '&apikey=4a591bbb';
     const request = fetch(text)
