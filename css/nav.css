@@ -62,7 +62,7 @@
     margin: 0; 
 }
 
-.menu ul > li > .down li:hover:nth-child(2n){
+.menu ul > li > .down li:hover:nth-child(2n){ /* pair */
     background-color: tomato;
 }
 
