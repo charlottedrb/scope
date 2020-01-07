@@ -3,7 +3,7 @@
 
 body{
     position: relative;
-    width: 80vw; 
+    width: 100vw; /* doit correspondre à la largeur de search*/
     margin: auto;
     background-color: black;
     font-family: 'Nunito Sans';
@@ -19,7 +19,7 @@ body{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80vw;
+    width: 100vw;
     height: 50%;
     text-align: center;
 }
@@ -45,12 +45,11 @@ body{
     font-weight: 900;
     font-family: 'Nunito Sans';
 }
-x
+
 
 /* MOVIE */
 
 .movie{
-    display: flex;
     flex-flow: row wrap;
     margin: 2rem;
     background-color: white;
