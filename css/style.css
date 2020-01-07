@@ -3,7 +3,7 @@
 
 body{
     position: relative;
-    width: 80vw; 
+    width: 100vw;
     margin: auto;
     background-color: black;
     font-family: 'Nunito Sans';
@@ -19,7 +19,7 @@ body{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80vw;
+    width: 100vw;
     height: 50%;
     text-align: center;
 }
@@ -45,7 +45,7 @@ body{
     font-weight: 900;
     font-family: 'Nunito Sans';
 }
-x
+
 
 /* MOVIE */
 
@@ -136,8 +136,8 @@ x
  */
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 480px) {
     .search h1{
         color: green;
@@ -145,8 +145,8 @@ and (max-device-width : 480px) {
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
+@media only screen
+and (min-device-width : 768px)
 and (max-device-width : 1024px) {
     .search h1{
         color: pink;
@@ -154,29 +154,25 @@ and (max-device-width : 1024px) {
 }
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
 and (orientation : landscape) {
 /* Styles */
 }
 
 /* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
 and (orientation : portrait) {
 /* Styles */
 }
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
+
 
 /* Large screens ----------- */
-@media only screen 
+@media only screen
 and (min-width : 1824px) {
 /* Styles */
 }
