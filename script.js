@@ -11,9 +11,9 @@ const genre = document.getElementById('genre');
 const ecrit = document.getElementById('ecriture');
 const title = document.getElementById('movieTitle');
 
-movie.style.opacity = "0"; 
+movie.style.opacity = "0";
 
-function search(){ 
+function search(){
     movie.style.opacity = "1";
     var search = document.getElementById('search').value;
     var text = 'http://www.omdbapi.com/?t=' + search + '&apikey=4a591bbb';
@@ -23,7 +23,7 @@ function search(){
                 .then(function (value) {
                     console.log(value);
                     // document.location.href="movie.html";
-                    desc.innerHTML = 'Story : ' + value.Plot;   
+                    desc.innerHTML = 'Story : ' + value.Plot;
                     post.src = value.Poster;
                     date.innerHTML = 'Date : ' + value.Released;
                     duree.innerHTML = 'Runtime : ' + value.Runtime;
@@ -45,8 +45,7 @@ function search(){
     //         response.json()
     //             .then(function (value) {
     //                 console.log(value);
-                    
+
     //             });
     //     });
 }
-

@@ -45,6 +45,21 @@ body{
     font-family: 'Nunito Sans';
 }
 
+@media screen and (min-width: 768px) and (max-width: 1388px){
+  .search h1{
+    display:block;
+    clear:both;
+    font-size: 2rem;
+  }
+  .search{
+      height: 30%;
+      width: 800px;
+  }
+  .movie{
+    margin: 1rem;
+  }
+}
+
 /* MOVIE */
 
 .movie{
@@ -102,7 +117,6 @@ body{
 .menu a:hover::after {
     animation: glitch 0.3s ease-in infinite reverse;
 }
-
 
 
 @keyframes glitch {
