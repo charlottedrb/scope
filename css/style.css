@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,900,900i&display=swap');
 
 
-body{
+body, form{
     position: relative;
     width: 80vw;
     margin: auto;
@@ -9,6 +9,11 @@ body{
     font-family: 'Nunito Sans';
     color: white;
     padding-bottom: 4rem;
+}
+
+form{
+  display: flex;
+  justify-content: center;
 }
 
 /* SEARCH */
@@ -33,13 +38,15 @@ body{
 .search input[type='text']{
     width: 50%;
     height: 2rem;
+    padding: 0.5rem;
+    border: none;
 }
 
 .search button{
     height: 2rem;
     padding: 0 1rem;
     background-color: tomato;
-    border: 0;
+    border: none;
     color: white;
     font-size: 1rem;
     font-weight: 900;
@@ -61,11 +68,8 @@ body{
     flex: 1 1 450px;
 }
 
-#poster{
-  width: 250px;
-}
-
 .movie .img{
+    width: auto;
     height: 500px;
     text-align: center;
 
@@ -81,90 +85,62 @@ body{
     margin: 0;
 }
 
+
 /*ANIMATIONS*/
 
-.menu a::before, .menu a::after {
-    content:attr(data-content);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-.menu a::before {
-    color: #00ffff;
-    z-index: -1;
-}
-
-.menu a::after {
-    color: tomato;
-    z-index: -2;
-}
-
-.menu a:hover::before {
-    animation: glitch 0.3s ease-in infinite;
-
-}
-
-.menu a:hover::after {
-    animation: glitch 0.3s ease-in infinite reverse;
-}
-
-
-@keyframes glitch {
-    0%   {transform: translate(-2px, 2px);}
-    25%  {transform: translate(-2px, -2px);}
-    50%  {transform: translate(2px, 2px);}
-    75%  {transform: translate(2px, -2px);}
-    100%  {transform: translate(-2px, 2px);}
-}
+/* https://codepen.io/fabiowallner/pen/ozkoYo */
 
 .wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper h1.glitch {
-  color: white;
-  font-weight: 800;
-  position: relative;
-  font-size: 40px;
-  padding: 30px;
-}
-.wrapper h1.glitch::before, .wrapper h1.glitch::after {
-  padding: 30px;
-  color: white;
-  content: "Scope";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: black;
-  overflow: hidden;
-  top: 0;
-}
-.wrapper h1.glitch::before {
-  left: 3px;
-  text-shadow: -2px 0 red;
-  animation-name: glitch-animation-1;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-}
-.wrapper h1.glitch::after {
-  left: -3px;
-  text-shadow: -2px 0 blue;
-  animation-name: glitch-animation-2;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes glitch-animation-1 {
+.wrapper h1.glitch {
+    position: relative;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 2rem;
+    color: white;
+    font-weight: 800; /* permet de mettre le titre en gras */
+    font-size: 5rem;
+}
+
+.wrapper h1.glitch::before, .wrapper h1.glitch::after {
+    content: "Scope"; /* reécrit le texte en before et after */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background: black;
+    color: white;
+    overflow: hidden; 
+}
+
+.wrapper h1.glitch::before {
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation-name: glitch-animation-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;  /* répète l'animation à l'infini */
+    animation-direction: alternate-reverse; /* la lecture de l'animation est alternée et change de sens à chaque fois (ex : gauche vers droite puis droite vers gauche */
+}
+
+.wrapper h1.glitch::after {
+    left: -3px;
+    text-shadow: -2px 0 blue; 
+    animation-name: glitch-animation-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes glitch-animation-1 { /* points clés du déplacement du before */
   0% {
     clip: rect(102px, 350px, 41px, 30px);
   }
@@ -229,7 +205,7 @@ body{
     clip: rect(133px, 350px, 37px, 30px);
   }
 }
-@keyframes glitch-animation-2 {
+@keyframes glitch-animation-2 { /* points clés du déplacement du after */
   0% {
     clip: rect(31px, 350px, 70px, 30px);
   }
@@ -300,65 +276,15 @@ body{
 
 @media screen and (max-width: 768px){
   .search h1{
-    font-size: 2rem;
-    color: green;
+      font-size: 2rem;
+      color: white;
   }
+
   .search{
       height: 30%;
   }
+
   .movie{
-    margin: 1rem;
+      margin: 1rem;
   }
-}
-
-/*
- * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
- */
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 0px)
-and (max-device-width : 480px) {
-    .search h1{
-        color: green;
-    }
-    ul{
-      /* padding: 0; */
-    }
-    .title{
-      margin: 2rem 0;
-    }
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-    .search h1{
-        color: pink;
-    }
-}
-
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-/* Styles */
-}
-
-
-
-/* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-/* Styles */
 }
