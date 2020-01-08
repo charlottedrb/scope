@@ -16,8 +16,9 @@ const button = document.getElementById('letsgo');
 
 // On cache la div de classe "movie" pour ne pas que l'espace qu'elle prend soit "présent" sur le site même si celle-ci est vide
 movie.style.display = "none";
-button.addEventListener("click", function (e) {
-    e.preventDefault();
+// Empêche la page de se recharger
+button.addEventListener("click", function (e) { 
+    e.preventDefault(); 
     return false;
 });
 
