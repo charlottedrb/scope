@@ -21,9 +21,10 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: center;
 }
 
-/* MENU DEROULANT */ 
+/* MENU DEROULANT */
 .menu ul > li {
     position: relative;
 }
@@ -31,7 +32,7 @@
 .menu ul > li > .down{
     display: block; /*très important pour la transition*/
     position: absolute;
-    width: 100%; 
+    width: 100%;
     padding: 0;
     z-index: 9999;
     opacity: 0; /* permet de faire une transition en fondu*/
@@ -39,10 +40,10 @@
 }
 
 .menu ul > li:hover > .down{
-    display: flex; 
+    display: flex;
     flex-flow: column wrap;
     opacity: 1;
-    
+
 }
 
 .menu ul > li:hover > ul.down{
@@ -59,7 +60,7 @@
 }
 
 .menu ul > li > .down li a{
-    margin: 0; 
+    margin: 0;
 }
 
 .menu ul > li > .down li:hover:nth-child(2n){ /* pair */
@@ -70,7 +71,7 @@
     background-color: #00ffff;
 }
 
-/* YEAR SEARCH BAR*/ 
+/* YEAR SEARCH BAR*/
 
 #yearSearch{
     width: 60%;
@@ -102,7 +103,7 @@ h1{
     font-size: 2rem;
 }
 
-.title{ 
+.title{
     font-weight: 900;
     font-style: italic;
     height: 100%;

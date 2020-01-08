@@ -40,7 +40,7 @@ function search(){
         });
 
     ytplayer = document.getElementById('ytplayer');
-    ytplayer.src = "https://www.youtube.com/embed/?listType=search&list=" + search + "bande annonce vostfr";
+    ytplayer.src = "https://www.youtube.com/embed/?listType=search&list=" + search + "trailer";
     // var link = 'https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=' + search + '%20bande%20annoncetype=video&videoDefinition=high&key=AIzaSyA8sfoWgWYvCeozwyxf5ZSPV839_XDp5-Q';
     // const YTrequest = fetch(link)
     //     .then(function (response) {
