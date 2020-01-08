@@ -13,9 +13,9 @@ const genre = document.getElementById('genre');
 const ecrit = document.getElementById('ecriture');
 const title = document.getElementById('movieTitle');
 
-movie.style.display = "none"; 
+movie.style.display = "none";
 
-function search(){ 
+function search(){
     movie.style.display = "flex";
     var search = document.getElementById('search').value;
     var text = 'http://www.omdbapi.com/?t=' + search + '&apikey=4a591bbb';
@@ -25,21 +25,29 @@ function search(){
                 .then(function (value) {
                     console.log(value);
                     // document.location.href="movie.html";
-                    desc.innerHTML = 'Story : ' + value.Plot;   
+                    desc.innerHTML = "<b>Story </b>" + ": " + value.Plot;
                     post.src = value.Poster;
-                    date.innerHTML = 'Date : ' + value.Released;
-                    duree.innerHTML = 'Runtime : ' + value.Runtime;
-                    act.innerHTML = 'Actors : ' + value.Actors;
-                    recomp.innerHTML = 'Awards : ' + value.Awards;
-                    box.innerHTML = 'BoxOffice : ' + value.BoxOffice;
-                    real.innerHTML = 'Director : ' + value.Director;
-                    genre.innerHTML = 'Genre : ' + value.Genre;
-                    ecrit.innerHTML = 'Writer : ' + value.Writer;
+                    date.innerHTML = "<b>Date </b>" + ": " + value.Released;
+                    duree.innerHTML = "<b>Runtime </b>" + ": " + value.Runtime;
+                    act.innerHTML = "<b>Actors </b>" + ": " + value.Actors;
+                    recomp.innerHTML = "<b>Awards </b>" + ": " + value.Awards;
+                    box.innerHTML = "<b>BoxOffice </b>" + ": " + value.BoxOffice;
+                    real.innerHTML = "<b>Director </b>" + ": " + value.Director;
+                    genre.innerHTML = "<b>Genre </b>" + ": " + value.Genre;
+                    ecrit.innerHTML = "<b>Writer </b>" + ": " + value.Writer;
                     title.innerHTML = value.Title.toUpperCase();
                 });
         });
 
     ytplayer = document.getElementById('ytplayer');
-    ytplayer.src = "https://www.youtube.com/embed/?listType=search&list=" + search + "bande annonce";
-}
+    ytplayer.src = "https://www.youtube.com/embed/?listType=search&list=" + search + "trailer";
+    // var link = 'https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=' + search + '%20bande%20annoncetype=video&videoDefinition=high&key=AIzaSyA8sfoWgWYvCeozwyxf5ZSPV839_XDp5-Q';
+    // const YTrequest = fetch(link)
+    //     .then(function (response) {
+    //         response.json()
+    //             .then(function (value) {
+    //                 console.log(value);
 
+    //             });
+    //     });
+}
