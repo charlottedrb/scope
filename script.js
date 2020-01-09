@@ -17,8 +17,8 @@ const button = document.getElementById('letsgo');
 // On cache la div de classe "movie" pour ne pas que l'espace qu'elle prend soit "présent" sur le site même si celle-ci est vide
 movie.style.display = "none";
 // Empêche la page de se recharger
-button.addEventListener("click", function (e) { 
-    e.preventDefault(); 
+button.addEventListener("click", function (e) {
+    e.preventDefault();
     return false;
 });
 
@@ -31,22 +31,40 @@ function search(){
         .then(function (response) { //récupération de la réponse de l'API en JSON
             response.json() //analyse la réponse en JSON
                 .then(function (value) { //récupartion de la valeur de la réponse
-                    console.log(value); 
+                    console.log(value);
+                    if (!value.Plot) {
+                      desc.innerHTML = "<b>Film non trouvé</b> ";
+                      post.src = "";
+                      date.innerHTML = "";
+                      duree.innerHTML = "";
+                      act.innerHTML = "";
+                      recomp.innerHTML = "";
+                      box.innerHTML = "";
+                      real.innerHTML = "";
+                      genre.innerHTML = "";
+                      ecrit.innerHTML = "";
+                      title.innerHTML = "";
+                      ytplayer.src = "";
+                      movie.style.backgroundColor = "black";
+                    }
                     // On met la valeur reçue dans le conteneur qui lui convient grâce aux id récupéré plus haut
-                    desc.innerHTML = "<b>Story </b>" + ": " + value.Plot;
-                    post.src = value.Poster;
-                    date.innerHTML = "<b>Date </b>" + ": " + value.Released;
-                    duree.innerHTML = "<b>Runtime </b>" + ": " + value.Runtime;
-                    act.innerHTML = "<b>Actors </b>" + ": " + value.Actors;
-                    recomp.innerHTML = "<b>Awards </b>" + ": " + value.Awards;
-                    box.innerHTML = "<b>BoxOffice </b>" + ": " + value.BoxOffice;
-                    real.innerHTML = "<b>Director </b>" + ": " + value.Director;
-                    genre.innerHTML = "<b>Genre </b>" + ": " + value.Genre;
-                    ecrit.innerHTML = "<b>Writer </b>" + ": " + value.Writer;
-                    title.innerHTML = value.Title.toUpperCase();
+                    else{
+                      desc.innerHTML = "<b>Story </b>" + ": " + value.Plot;
+                      post.src = value.Poster;
+                      date.innerHTML = "<b>Date </b>" + ": " + value.Released;
+                      duree.innerHTML = "<b>Runtime </b>" + ": " + value.Runtime;
+                      act.innerHTML = "<b>Actors </b>" + ": " + value.Actors;
+                      recomp.innerHTML = "<b>Awards </b>" + ": " + value.Awards;
+                      box.innerHTML = "<b>BoxOffice </b>" + ": " + value.BoxOffice;
+                      real.innerHTML = "<b>Director </b>" + ": " + value.Director;
+                      genre.innerHTML = "<b>Genre </b>" + ": " + value.Genre;
+                      ecrit.innerHTML = "<b>Writer </b>" + ": " + value.Writer;
+                      title.innerHTML = value.Title.toUpperCase();
+                      // Permet d'afficher la bande-annonce
+                      ytplayer.src = "https://www.youtube.com/embed/?listType=search&list=" + search + "trailer"; // on utilise une URL trouvée sur la doc d'API Youtube  à laquelle on
+                                                                                                                  // rajoute notre titre de film et le mot "trailer" pour affiche la BA
+                    }
                 });
         });
-    // Permet d'afficher la bande-annonce
-    ytplayer.src = "https://www.youtube.com/embed/?listType=search&list=" + search + "trailer"; // on utilise une URL trouvée sur la doc d'API Youtube  à laquelle on 
-                                                                                                // rajoute notre titre de film et le mot "trailer" pour affiche la BA
+
 }
