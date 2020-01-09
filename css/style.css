@@ -12,8 +12,8 @@ body, form{
 }
 
 form{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* SEARCH */
@@ -53,10 +53,6 @@ form{
     font-family: 'Nunito Sans';
 }
 
-b{
-  color: white;
-}
-
 /* MOVIE */
 
 .movie{
@@ -86,6 +82,11 @@ b{
 
 #movieTitle{
     margin: 0;
+}
+
+#errorImg{
+    flex: 0 0 600px;
+    justify-content: center;
 }
 
 
@@ -123,7 +124,7 @@ b{
 
 .wrapper h1.glitch::before {
     left: 3px;
-    text-shadow: -2px 0 red;
+    text-shadow: -2px 0 tomato;
     animation-name: glitch-animation-1;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -134,7 +135,7 @@ b{
 
 .wrapper h1.glitch::after {
     left: -3px;
-    text-shadow: -2px 0 blue;
+    text-shadow: -2px 0 cyan;
     animation-name: glitch-animation-2;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -278,20 +279,25 @@ b{
 
 
 @media screen and (max-width: 768px){
-  .search h1{
-      font-size: 2rem;
-      color: white;
-  }
+    .search h1{
+        font-size: 2rem;
+        color: white;
+    }
 
-  .search{
-      height: 30%;
-  }
+    .search{
+        height: 30%;
+    }
 
-  .movie{
-      margin: 1rem;
-  }
+    .movie{
+        margin: 1rem;
+    }
 
-  .movie .img img{
-    width: 250px;
+    .movie .img img{
+        width: 250px;
+    }
+
+    #errorImg{
+        flex: 0 0 320px;
+        justify-content: center;
   }
 }
